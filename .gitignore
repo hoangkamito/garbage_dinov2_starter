@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# Dataset
+data/
+dataset/
+
+# Training outputs
+outputs/
+checkpoints/
+runs/
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -18,14 +18,14 @@ class DINOv2Classifier(nn.Module):
 
         self.backbone = torch.hub.load(
             "facebookresearch/dinov2",
-            model_name,
+            "dinov2_vits14",
             pretrained=True,
         )
 
-        embed_dim = self.backbone.embed_dim
+        embed_dim = 384  # DINOv2 ViT-S/14 embedding dimension
 
         self.head = nn.Sequential(
-            nn.Dropout(dropout),
+            nn.Dropout(0.2),
             nn.Linear(embed_dim, num_classes),
         )
 
