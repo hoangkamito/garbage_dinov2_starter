@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "pdf_pages": 62,
+  "docx_size_bytes": 9631021,
+  "pdf_size_bytes": 4676547,
+  "docx_tables_count": 29,
+  "docx_embedded_media_count": 21,
+  "docx_omath_count": 1,
+  "toc_materialized_entries_count": 44,
+  "toc_sample_entries": [
+    "Tóm tắt (Tiếng Việt và Tiếng Anh)viii",
+    "1. Giới thiệu1",
+    "1.1. Đặt vấn đề và bối cảnh ứng dụng1",
+    "1.2. Mục tiêu nghiên cứu, hướng tiếp cận và hoàn thiện theo góp ý giảng viên1",
+    "1.3. Phạm vi nghiên cứu và bố cục báo cáo2",
+    "2. Cơ sở lý thuyết và nghiên cứu liên quan3",
+    "2.1. Phân loại ảnh rác thải, mạng tích chập CNN và kiến trúc ResNet503",
+    "2.2. Vision Transformer (ViT), DINOv2 và học biểu diễn tự giám sát3",
+    "2.3. Họ mô hình DETR, Deformable DETR, RT-DETR và YOLO11s trong phát hiện đối tượng4",
+    "2.4. Kiến trúc ghép nối hai giai đoạn (Cascade) và giả thuyết lệch miền vùng cắt4",
+    "2.5. Các chỉ số và giao thức đánh giá chuẩn mực5",
+    "3. Dữ liệu, Kiểm toán Chống Rò rỉ và Giao thức Thực nghiệm6",
+    "3.1. Bộ dữ liệu phân loại Garbage Classification v2 (10 lớp) và quy tắc ánh xạ nhãn6",
+    "3.2. Phân chia tập dữ liệu phân loại và khóa Manifest chống rò rỉ7",
+    "3.3. Tiền xử lý và tăng cường dữ liệu cho từng bài toán8"
+  ],
+  "expected_tables_count": 26,
+  "missing_tables": [],
+  "expected_figures_count": 20,
+  "missing_figures": [],
+  "missing_mandatory_numbers": [],
+  "sha256_hashes": {
+    "Backup_Original_docx": "5d05ec81dd9d2b08ab652769531a2bd0559b9d6e870f7b2ff7ff7b26bae41c2c",
+    "Previous_Final_Submission_docx": "cdffa9779f5847eecbb046616513102682945637308260028314e94707ec13a9",
+    "Template_submission_input_v6_docx": "48a5b3c75350816f2ee4f2d85745769b2d77a58858596ef5e308983635148fc6",
+    "New_DG38_Final_Complete_Report_docx": "1155d5a93d8cfa04958aee605302d1c95612fe16cd28813840846b5d46eb2fe6",
+    "New_DG38_Final_Complete_Report_pdf": "076c7cabba2e2751cb3cbca62a23b6c339b17d86d44f5c7ee8c0de95a2191b82"
+  }
+}

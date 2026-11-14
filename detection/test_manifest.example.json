@@ -1,0 +1,14 @@
+{
+  "split": "test",
+  "independent": false,
+  "description": "REPLACE with test collection/split provenance and the checks made against BOTH models' training and validation data. Set independent to true only after those checks.",
+  "independent_of": [
+    "detector_train",
+    "detector_validation",
+    "classifier_train",
+    "classifier_validation"
+  ],
+  "test_coco": "REPLACE_WITH_INDEPENDENT_TEST/annotations_coco.json",
+  "test_images": "REPLACE_WITH_INDEPENDENT_TEST/images",
+  "references": []
+}

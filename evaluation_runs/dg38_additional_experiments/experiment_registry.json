@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.1",
+  "project": "DG38 Additional Experiments — DINOv2 + Deformable DETR",
+  "initial_colab_budget_cu": 200.45,
+  "minimum_safety_reserve_cu": 40.0,
+  "required_seeds": [
+    42,
+    123,
+    2026
+  ],
+  "locked_dataset_manifests": {
+    "classification_train_val": {
+      "file": "manifests/classification_train_val_manifest.json",
+      "sha256": "cd27f0e69e70691c0ae614e5d0b86dd4b84ec4636c823ae7e1539b6e446995b5",
+      "split_signature": "1da7e63c9ee27d1831b3595350460321897565b0375ef33da0aea1ec0e5660c7",
+      "counts": {
+        "train": 9807,
+        "val": 1226
+      }
+    },
+    "classification_test": {
+      "file": "manifests/classification_test_manifest.json",
+      "sha256": "7615b4fa1b67f0dd5d67b2e9ab7fa59f1602ea09a8352a3e5b07ef9c506fe86e",
+      "counts": {
+        "test": 1226
+      }
+    },
+    "detection_splits": {
+      "file": "manifests/detection_splits_manifest.json",
+      "train": {
+        "images": 8289,
+        "boxes": 18345,
+        "annotations_sha256": "a19eec883ccd8bfd76248577275ae15b01aa1c14878507fe2cda59fc4226c2eb"
+      },
+      "valid_clean_candidate": {
+        "images": 1743,
+        "boxes": 3932,
+        "annotations_sha256": "9faa0cc8aade9802f63905c7efe9a8c10f7118d866b186d46f2fd808c3464de8",
+        "audit_from_original_valid_2316": {
+          "original_valid_images": 2316,
+          "original_valid_boxes": 5110,
+          "stage1_exact_sha256_with_train": 506,
+          "stage1_exact_sha256_internal_valid": 37,
+          "stage1_sha_clean_images": 1773,
+          "stage2_phash_with_train_confirmed": 28,
+          "stage2_phash_internal_valid_confirmed": 2,
+          "total_excluded_images": 573,
+          "retained_clean_images": 1743,
+          "retained_clean_boxes": 3932
+        }
+      },
+      "test_final_candidate": {
+        "images": 871,
+        "boxes": 1884,
+        "annotations_sha256": "e26ff743f2a94ef9a6069a95cf3c3c69581e43295ff48bb5298b301bfde3eec1"
+      }
+    }
+  },
+  "historical_reference_models": {
+    "dinov2_vitb14_reference_checkpoint": {
+      "task": "classification",
+      "model_name": "dinov2_vitb14",
+      "checkpoint_path": "checkpoints/dinov2_garbage_final.pth",
+      "checkpoint_sha256": "bee29bc7364fa18d374e68bee7f435282917fd3d98b2a83dbca7dffe53e3ec75",
+      "finetune_blocks": 4,
+      "seed": 42,
+      "status": "HISTORICAL_SINGLE_SEED_REFERENCE",
+      "metrics": {
+        "test_accuracy": 0.986949,
+        "test_macro_f1": 0.984316
+      },
+      "notes": "Huấn luyện 10 epochs Linear Probe + 5 epochs Fine-tune 4 block cuối trên Tesla T4 (Copy_of_Trainning_DINOv2.ipynb). Không được tính là đủ 3 seeds."
+    },
+    "deformable_detr_reference_checkpoint": {
+      "task": "detection",
+      "model_name": "deformable_detr_dinov2_vits14",
+      "checkpoint_path": "detection/checkpoints_wastedetect/best_model.pt",
+      "checkpoint_sha256": "218aa21101d27ffffe43b827300c8769e168a9d8998b792f1dacbb6548a49556",
+      "saved_epoch": 29,
+      "total_epochs": 30,
+      "img_size": 518,
+      "num_queries": 100,
+      "seed": 42,
+      "status": "HISTORICAL_SINGLE_SEED_REFERENCE",
+      "metrics": {
+        "val_clean_original_mAP_50": 0.7145,
+        "val_clean_original_mAP_50_95": 0.4335,
+        "val_clean_nms_mAP_50": 0.7617,
+        "val_clean_nms_mAP_50_95": 0.4445,
+        "val_clean_cascade_original_mAP_50": 0.4083,
+        "val_clean_cascade_nms_mAP_50": 0.4399,
+        "test_original_mAP_50": 0.7332,
+        "test_nms_mAP_50": 0.7801,
+        "cascade_original_mAP_50": 0.4134,
+        "cascade_nms_mAP_50": 0.4486
+      },
+      "notes": "Checkpoint gốc tại detection/checkpoints_wastedetect/best_model.pt (epoch 29/30, img_size=518, num_queries=100). Chỉ là 1 seed tham chiếu (seed 42), không có 3 seeds độc lập."
+    }
+  },
+  "experiments": {
+    "cls_resnet50_blocksall_seed42": {
+      "experiment_id": "cls_resnet50_blocksall_seed42",
+      "task": "classification",
+      "model_name": "resnet50",
+      "protocol_id": "resnet50_15ep_adamw",
+      "manifest_sha256": "1da7e63c9ee27d1831b3595350460321897565b0375ef33da0aea1ec0e5660c7",
+      "seed": 42,
+      "priority": 1,
+      "budget_category": "resnet50_baseline",
+      "status": "NOT_STARTED"
+    },
+    "cls_resnet50_blocksall_seed123": {
+      "experiment_id": "cls_resnet50_blocksall_seed123",
+      "task": "classification",
+      "model_name": "resnet50",
+      "protocol_id": "resnet50_15ep_adamw",
+      "manifest_sha256": "1da7e63c9ee27d1831b3595350460321897565b0375ef33da0aea1ec0e5660c7",
+      "seed": 123,
+      "priority": 3,
+      "budget_category": "three_seed_experiments",
+      "status": "NOT_STARTED"
+    },
+    "cls_resnet50_blocksall_seed2026": {
+      "experiment_id": "cls_resnet50_blocksall_seed2026",
+      "task": "classification",
+      "model_name": "resnet50",
+      "protocol_id": "resnet50_15ep_adamw",
+      "manifest_sha256": "1da7e63c9ee27d1831b3595350460321897565b0375ef33da0aea1ec0e5660c7",
+      "seed": 2026,
+      "priority": 3,
+      "budget_category": "three_seed_experiments",
+      "status": "NOT_STARTED"
+    },
+    "det_yolo11s_seed42": {
+      "experiment_id": "det_yolo11s_seed42",
+      "task": "detection",
+      "model_name": "yolo11s",
+      "protocol_id": "yolo11s_30ep_cleanval",
+      "manifest_sha256": "9faa0cc8aade9802f63905c7efe9a8c10f7118d866b186d46f2fd808c3464de8",
+      "seed": 42,
+      "priority": 2,
+      "budget_category": "yolo11s_baseline",
+      "status": "NOT_STARTED"
+    },
+    "det_yolo11s_seed123": {
+      "experiment_id": "det_yolo11s_seed123",
+      "task": "detection",
+      "model_name": "yolo11s",
+      "protocol_id": "yolo11s_30ep_cleanval",
+      "manifest_sha256": "9faa0cc8aade9802f63905c7efe9a8c10f7118d866b186d46f2fd808c3464de8",
+      "seed": 123,
+      "priority": 4,
+      "budget_category": "three_seed_experiments",
+      "status": "NOT_STARTED"
+    },
+    "det_yolo11s_seed2026": {
+      "experiment_id": "det_yolo11s_seed2026",
+      "task": "detection",
+      "model_name": "yolo11s",
+      "protocol_id": "yolo11s_30ep_cleanval",
+      "manifest_sha256": "9faa0cc8aade9802f63905c7efe9a8c10f7118d866b186d46f2fd808c3464de8",
+      "seed": 2026,
+      "priority": 4,
+      "budget_category": "three_seed_experiments",
+      "status": "NOT_STARTED"
+    },
+    "crop_ablation_variants_A_to_E": {
+      "experiment_id": "crop_ablation_variants_A_to_E",
+      "task": "cascade_crop_ablation",
+      "model_name": "deformable_detr_plus_dinov2_vitb14",
+      "protocol_id": "cached_proposals_cleanval_1743",
+      "manifest_sha256": "9faa0cc8aade9802f63905c7efe9a8c10f7118d866b186d46f2fd808c3464de8",
+      "seed": 42,
+      "priority": 5,
+      "budget_category": "crop_preprocessing_ablation",
+      "status": "NOT_STARTED"
+    },
+    "ablation_dinov2_vitb14_blocks0_seed42": {
+      "experiment_id": "ablation_dinov2_vitb14_blocks0_seed42",
+      "task": "classification",
+      "model_name": "dinov2_vitb14",
+      "protocol_id": "dinov2_finetune_blocks_0",
+      "manifest_sha256": "1da7e63c9ee27d1831b3595350460321897565b0375ef33da0aea1ec0e5660c7",
+      "seed": 42,
+      "priority": 6,
+      "budget_category": "finetune_blocks_ablation",
+      "status": "NOT_STARTED"
+    },
+    "ablation_dinov2_vitb14_blocks2_seed42": {
+      "experiment_id": "ablation_dinov2_vitb14_blocks2_seed42",
+      "task": "classification",
+      "model_name": "dinov2_vitb14",
+      "protocol_id": "dinov2_finetune_blocks_2",
+      "manifest_sha256": "1da7e63c9ee27d1831b3595350460321897565b0375ef33da0aea1ec0e5660c7",
+      "seed": 42,
+      "priority": 6,
+      "budget_category": "finetune_blocks_ablation",
+      "status": "NOT_STARTED"
+    },
+    "ablation_dinov2_vitb14_blocks4_seed42": {
+      "experiment_id": "ablation_dinov2_vitb14_blocks4_seed42",
+      "task": "classification",
+      "model_name": "dinov2_vitb14",
+      "protocol_id": "dinov2_finetune_blocks_4",
+      "manifest_sha256": "1da7e63c9ee27d1831b3595350460321897565b0375ef33da0aea1ec0e5660c7",
+      "seed": 42,
+      "priority": 6,
+      "budget_category": "finetune_blocks_ablation",
+      "status": "NOT_STARTED"
+    },
+    "ablation_dinov2_vitb14_blocks12_seed42": {
+      "experiment_id": "ablation_dinov2_vitb14_blocks12_seed42",
+      "task": "classification",
+      "model_name": "dinov2_vitb14",
+      "protocol_id": "dinov2_finetune_blocks_12",
+      "manifest_sha256": "1da7e63c9ee27d1831b3595350460321897565b0375ef33da0aea1ec0e5660c7",
+      "seed": 42,
+      "priority": 7,
+      "budget_category": "finetune_blocks_ablation",
+      "status": "NOT_STARTED"
+    },
+    "cls_dinov2_vitb14_blocks4_seed123": {
+      "experiment_id": "cls_dinov2_vitb14_blocks4_seed123",
+      "task": "classification",
+      "model_name": "dinov2_vitb14",
+      "protocol_id": "dinov2_finetune_blocks_4",
+      "manifest_sha256": "1da7e63c9ee27d1831b3595350460321897565b0375ef33da0aea1ec0e5660c7",
+      "seed": 123,
+      "priority": 8,
+      "budget_category": "three_seed_experiments",
+      "status": "NOT_STARTED"
+    },
+    "cls_dinov2_vitb14_blocks4_seed2026": {
+      "experiment_id": "cls_dinov2_vitb14_blocks4_seed2026",
+      "task": "classification",
+      "model_name": "dinov2_vitb14",
+      "protocol_id": "dinov2_finetune_blocks_4",
+      "manifest_sha256": "1da7e63c9ee27d1831b3595350460321897565b0375ef33da0aea1ec0e5660c7",
+      "seed": 2026,
+      "priority": 8,
+      "budget_category": "three_seed_experiments",
+      "status": "NOT_STARTED"
+    }
+  }
+}

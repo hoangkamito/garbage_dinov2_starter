@@ -1,0 +1,1215 @@
+{
+  "T00": [
+    [
+      "Lớp rác",
+      "Garbage Dataset (Tổng số ảnh)",
+      "Train (cls_train)",
+      "Validation (cls_val)",
+      "Test (cls_test)",
+      "Ánh xạ sang Hệ phát hiện (Class Mapping)",
+      "Vai trò phân tích"
+    ],
+    [
+      "battery",
+      "756",
+      "605",
+      "75",
+      "76",
+      "Ngoài phạm vi (OOS)",
+      "Phân loại 10 lớp"
+    ],
+    [
+      "biological",
+      "699",
+      "559",
+      "70",
+      "70",
+      "organic (ID: 2)",
+      "Phân loại 10 lớp & Đối chiếu 5 lớp"
+    ],
+    [
+      "cardboard",
+      "1.411",
+      "1.129",
+      "141",
+      "141",
+      "Ngoài phạm vi (OOS)",
+      "Phân loại 10 lớp"
+    ],
+    [
+      "clothes",
+      "1.892",
+      "1.513",
+      "190",
+      "189",
+      "Ngoài phạm vi (OOS)",
+      "Phân loại 10 lớp"
+    ],
+    [
+      "glass",
+      "1.736",
+      "1.389",
+      "173",
+      "174",
+      "glass (ID: 0)",
+      "Phân loại 10 lớp & Đối chiếu 5 lớp"
+    ],
+    [
+      "metal",
+      "930",
+      "744",
+      "93",
+      "93",
+      "metal (ID: 1)",
+      "Phân loại 10 lớp & Đối chiếu 5 lớp"
+    ],
+    [
+      "paper",
+      "1.336",
+      "1.069",
+      "133",
+      "134",
+      "paper (ID: 3)",
+      "Phân loại 10 lớp & Đối chiếu 5 lớp"
+    ],
+    [
+      "plastic",
+      "1.597",
+      "1.278",
+      "160",
+      "159",
+      "plastic (ID: 4)",
+      "Phân loại 10 lớp & Đối chiếu 5 lớp"
+    ],
+    [
+      "shoes",
+      "1.449",
+      "1.159",
+      "145",
+      "145",
+      "Ngoài phạm vi (OOS)",
+      "Phân loại 10 lớp"
+    ],
+    [
+      "trash",
+      "453",
+      "362",
+      "46",
+      "45",
+      "Ngoài phạm vi (OOS)",
+      "Phân loại 10 lớp"
+    ],
+    [
+      "Tổng cộng",
+      "12.259",
+      "9.807 (80,0%)",
+      "1.226 (10,0%)",
+      "1.226 (10,0%)",
+      "5 lớp Trong phạm vi + 5 lớp OOS",
+      "10 lớp hoàn chỉnh"
+    ]
+  ],
+  "T01": [
+    [
+      "Tác vụ & Bộ dữ liệu",
+      "Tập phân chia",
+      "Số lượng ảnh",
+      "Số lượng Bounding Box",
+      "Tỷ lệ / Trạng thái kiểm toán"
+    ],
+    [
+      "Nhánh Phân loại (Garbage Dataset - 10 lớp)",
+      "cls_train",
+      "9.807",
+      "Không có (ảnh nhãn đơn)",
+      "80,0% (seed 42, stratified)"
+    ],
+    [
+      "Nhánh Phân loại (Garbage Dataset - 10 lớp)",
+      "cls_val",
+      "1.226",
+      "Không có (ảnh nhãn đơn)",
+      "10,0% (seed 42, stratified)"
+    ],
+    [
+      "Nhánh Phân loại (Garbage Dataset - 10 lớp)",
+      "cls_test",
+      "1.226",
+      "Không có (ảnh nhãn đơn)",
+      "10,0% (Đánh giá phân loại độc lập)"
+    ],
+    [
+      "Nhánh Phân loại (Garbage Dataset - 10 lớp)",
+      "Tổng cộng",
+      "12.259",
+      "Không có (ảnh nhãn đơn)",
+      "100%; số lượng được tái dựng từ notebook, không có manifest huấn luyện gốc"
+    ],
+    [
+      "Nhánh Phát hiện (WasteDetect_Dataset - 5 lớp)",
+      "train",
+      "8.289",
+      "18.345",
+      "Tập huấn luyện Deformable DETR"
+    ],
+    [
+      "Nhánh Phát hiện (WasteDetect_Dataset - 5 lớp)",
+      "valid (gốc)",
+      "2.316",
+      "5.110",
+      "Tập validation gốc (chứa ảnh trùng)"
+    ],
+    [
+      "Nhánh Phát hiện (WasteDetect_Dataset - 5 lớp)",
+      "valid_clean_candidate",
+      "1.743",
+      "3.932",
+      "Đã khử trùng lặp (Khóa ngưỡng NMS & PR)"
+    ],
+    [
+      "Nhánh Phát hiện (WasteDetect_Dataset - 5 lớp)",
+      "test (gốc)",
+      "1.195",
+      "2.645",
+      "Tập test gốc (chưa kiểm toán)"
+    ],
+    [
+      "Nhánh Phát hiện (WasteDetect_Dataset - 5 lớp)",
+      "test_final_candidate",
+      "871",
+      "1.884",
+      "Test độc lập (Khử trùng đa tầng SHA-256 + pHash)"
+    ]
+  ],
+  "T02": [
+    [
+      "Lớp (COCO ID)",
+      "Train gốc: box (%)",
+      "Valid gốc: box (%)",
+      "Valid sạch: box (%)",
+      "Test gốc: box (%)",
+      "Final Test: box (%)",
+      "Ảnh chứa lớp ở Final Test"
+    ],
+    [
+      "glass (ID: 0)",
+      "1.372 (7,48%)",
+      "359 (7,03%)",
+      "316 (8,04%)",
+      "179 (6,77%)",
+      "156 (8,28%)",
+      "116"
+    ],
+    [
+      "metal (ID: 1)",
+      "2.552 (13,91%)",
+      "757 (14,81%)",
+      "334 (8,49%)",
+      "432 (16,33%)",
+      "134 (7,11%)",
+      "64"
+    ],
+    [
+      "organic (ID: 2)",
+      "6.587 (35,91%)",
+      "1.988 (38,90%)",
+      "1.897 (48,25%)",
+      "960 (36,29%)",
+      "911 (48,35%)",
+      "389"
+    ],
+    [
+      "paper (ID: 3)",
+      "2.795 (15,24%)",
+      "689 (13,48%)",
+      "466 (11,85%)",
+      "330 (12,48%)",
+      "192 (10,19%)",
+      "87"
+    ],
+    [
+      "plastic (ID: 4)",
+      "5.039 (27,47%)",
+      "1.317 (25,77%)",
+      "919 (23,37%)",
+      "744 (28,13%)",
+      "491 (26,06%)",
+      "215"
+    ],
+    [
+      "Tổng Bounding Box",
+      "18.345",
+      "5.110",
+      "3.932",
+      "2.645",
+      "1.884",
+      "871 ảnh; số ảnh theo lớp có thể chồng nhau"
+    ]
+  ],
+  "T03": [
+    [
+      "Thành phần / Tham số",
+      "Chi tiết triển khai kỹ thuật thực tế"
+    ],
+    [
+      "Backbone phân loại",
+      "facebook/dinov2-base (ViT-B/14, 12 block transformer, embedding 768 chiều, patch 14x14)"
+    ],
+    [
+      "Đầu phân loại",
+      "LayerNorm(768) -> Dropout(0,2) -> Linear(768, 10 lớp)"
+    ],
+    [
+      "Chiến lược thích nghi",
+      "Notebook: mở 4 block cuối (8–11), layernorm cuối và head; checkpoint cuối không lưu chính sách requires_grad"
+    ],
+    [
+      "Tiền xử lý ảnh",
+      "Resize(256) -> CenterCrop(224) -> Normalize (mean/std ImageNet)"
+    ],
+    [
+      "Tăng cường dữ liệu (Train)",
+      "RandomResizedCrop(224, scale 0.8–1.0), lật ngang 0,5; RandomRotation(10°); ColorJitter(0,2 cho brightness/contrast/saturation)"
+    ],
+    [
+      "Optimizer & Learning rate",
+      "AdamW; linear stage lr=1e-3; fine-tune: head 1e-4, backbone 1e-5; weight_decay=1e-4"
+    ],
+    [
+      "Lựa chọn Checkpoint",
+      "Lưu checkpoint có Macro F1 cao nhất trên tập validation (dinov2_garbage_final.pth)"
+    ],
+    [
+      "Môi trường phần cứng",
+      "PyTorch 2.x; GPU NVIDIA Tesla T4 16 GB (Google Colab)"
+    ]
+  ],
+  "T04": [
+    [
+      "Thành phần kiến trúc / Siêu tham số",
+      "Chi tiết triển khai kỹ thuật"
+    ],
+    [
+      "Backbone trích xuất đặc trưng",
+      "DINOv2 ViT-S/14 đóng băng hoàn toàn (dinov2_vits14, 384 chiều, patch 14x14)"
+    ],
+    [
+      "Kích thước ảnh đầu vào",
+      "518 x 518 pixels RGB (tương ứng lưới 37 x 37 patch token)"
+    ],
+    [
+      "Tạo đặc trưng đa tỷ lệ (Multi-scale)",
+      "Trích xuất tại 4 tầng LAYER_TAPS = [2, 5, 8, 11], chiếu 1x1 Conv + GroupNorm về 256 chiều, nội suy 4 tỷ lệ [2.0, 1.0, 0.5, 0.25] và thêm 1 tầng Extra Downsample -> 5 feature levels"
+    ],
+    [
+      "Deformable Transformer",
+      "3 lớp Deformable Encoder + 3 lớp Deformable Decoder; 8 attention heads; 4 sampling points; d_model = 256"
+    ],
+    [
+      "Số lượng Object Queries",
+      "100 queries mặc định"
+    ],
+    [
+      "Ghép cặp tối ưu (Matcher)",
+      "HungarianMatcher với hàm chi phí: 2.0 * cost_class + 5.0 * cost_bbox (L1) + 2.0 * cost_giou"
+    ],
+    [
+      "Hàm mất mát (SetCriterion)",
+      "Focal Loss có trọng số lớp (alpha=0.25, gamma=2.0, weight=2.0) + L1 Bbox Loss (weight=5.0) + GIoU Loss (weight=2.0)"
+    ],
+    [
+      "Tối ưu hóa & Lịch học",
+      "AdamW, lr=1e-4, weight_decay=1e-4; batch_size=1 trong checkpoint; epochs cấu hình=30, lịch sử lưu=29; CosineAnnealingLR"
+    ],
+    [
+      "Checkpoint tốt nhất",
+      "detection/checkpoints_wastedetect/best_model.pt (Epoch 29, SHA-256: 218aa211...)"
+    ]
+  ],
+  "T05": [
+    [
+      "Thành phần",
+      "Bài báo tham chiếu (Islam và cs., 2025)",
+      "Mô hình DINOv2 của nhóm"
+    ],
+    [
+      "Tác vụ",
+      "Phân loại ảnh rác, 10 lớp",
+      "Phân loại ảnh rác, 10 lớp"
+    ],
+    [
+      "Bộ dữ liệu",
+      "Waste Classification V2 (21.983 ảnh)",
+      "Garbage Dataset / Waste Classification V2 (12.259 ảnh)"
+    ],
+    [
+      "Kiến trúc Backbone",
+      "DenseNet201 (CNN ghép song song)",
+      "DINOv2 ViT-B/14 (Vision Transformer)"
+    ],
+    [
+      "Cơ chế trích xuất",
+      "Song song Max/Avg Pooling + Squeeze-and-Excitation",
+      "Multi-head Self-Attention tiền huấn luyện tự giám sát"
+    ],
+    [
+      "Số lượng tham số",
+      "~50,79 triệu tham số",
+      "86.589.706 tổng; notebook: 28.368.394 tham số mở khóa (4 block cuối + norm + head)"
+    ],
+    [
+      "Đầu vào & Tiền xử lý",
+      "Ảnh thô resize 170 x 170 pixels",
+      "Resize(256) -> CenterCrop(224) -> Normalize"
+    ],
+    [
+      "Phân chia tập dữ liệu",
+      "70:10:20 (khoảng 4.394 ảnh test)",
+      "80:10:10 (9.807 train / 1.226 val / 1.226 test)"
+    ],
+    [
+      "Tối ưu hóa & Framework",
+      "TensorFlow / Adam (lr=0,001), Early Stopping",
+      "PyTorch / AdamW (head 1e-4, backbone 1e-5)"
+    ]
+  ],
+  "T06": [
+    [
+      "Phương pháp",
+      "Nhánh mô hình",
+      "Cơ chế NMS",
+      "NMS IoU",
+      "PR Threshold",
+      "Proposal Thr",
+      "Quy tắc gán nhãn và điểm số"
+    ],
+    [
+      "detector_​original",
+      "Deformable DETR",
+      "Không áp dụng (None)",
+      "-",
+      "0,30",
+      "0,0",
+      "Giữ nguyên det_class và det_score từ Detector"
+    ],
+    [
+      "detector_​nms",
+      "Deformable DETR",
+      "Class-Agnostic NMS",
+      "0,70",
+      "0,30",
+      "0,0",
+      "Lọc NMS trên toàn bộ queries; giữ det_class và det_score"
+    ],
+    [
+      "cascade_​original",
+      "Two-Stage Cascade",
+      "Không áp dụng (None)",
+      "-",
+      "0,25",
+      "0,0",
+      "100 proposal -> Crop -> DINOv2 gán nhãn; score = det_score * cls_score"
+    ],
+    [
+      "cascade_​nms",
+      "Two-Stage Cascade",
+      "Class-Agnostic NMS",
+      "0,70",
+      "0,25",
+      "0,0",
+      "NMS trước khi crop -> DINOv2 gán nhãn; score = det_score * cls_score"
+    ]
+  ],
+  "T07": [
+    [
+      "Lớp rác thải (Category)",
+      "Precision (%)",
+      "Recall (%)",
+      "F1-score (%)",
+      "Số lượng ảnh test (Support)"
+    ],
+    [
+      "battery",
+      "100,00",
+      "98,68",
+      "99,34",
+      "76"
+    ],
+    [
+      "biological",
+      "100,00",
+      "98,57",
+      "99,28",
+      "70"
+    ],
+    [
+      "cardboard",
+      "98,57",
+      "97,87",
+      "98,22",
+      "141"
+    ],
+    [
+      "clothes",
+      "100,00",
+      "100,00",
+      "100,00",
+      "189"
+    ],
+    [
+      "glass",
+      "99,42",
+      "98,85",
+      "99,14",
+      "174"
+    ],
+    [
+      "metal",
+      "95,88",
+      "100,00",
+      "97,89",
+      "93"
+    ],
+    [
+      "paper",
+      "96,32",
+      "97,76",
+      "97,04",
+      "134"
+    ],
+    [
+      "plastic",
+      "98,14",
+      "99,37",
+      "98,75",
+      "159"
+    ],
+    [
+      "shoes",
+      "99,31",
+      "99,31",
+      "99,31",
+      "145"
+    ],
+    [
+      "trash",
+      "100,00",
+      "91,11",
+      "95,35",
+      "45"
+    ],
+    [
+      "Độ chính xác tổng thể (Accuracy)",
+      "-",
+      "-",
+      "98,69",
+      "1.226"
+    ],
+    [
+      "Trung bình Macro (Macro Avg 10 lớp)",
+      "98,76",
+      "98,15",
+      "98,43",
+      "1.226"
+    ],
+    [
+      "Trung bình có trọng số (Weighted Avg 10 lớp)",
+      "98,72",
+      "98,69",
+      "98,69",
+      "1.226"
+    ],
+    [
+      "Tham chiếu riêng 5 lớp chung (biological, glass, metal, paper, plastic)",
+      "97,95",
+      "98,91",
+      "98,42",
+      "630"
+    ]
+  ],
+  "T08": [
+    [
+      "Chỉ số đánh giá",
+      "Bài báo tham chiếu (Islam và cs.)",
+      "Nhóm (Macro Avg)",
+      "Nhóm (Weighted Avg)",
+      "Chênh lệch so nhóm Weighted (điểm %)*"
+    ],
+    [
+      "Accuracy (%)",
+      "97,43",
+      "98,69",
+      "98,69",
+      "+1,26"
+    ],
+    [
+      "Precision (%)",
+      "97,45",
+      "98,76",
+      "98,72",
+      "+1,27"
+    ],
+    [
+      "Recall (%)",
+      "97,43",
+      "98,15",
+      "98,69",
+      "+1,26"
+    ],
+    [
+      "F1-score (%)",
+      "97,43",
+      "98,43",
+      "98,69",
+      "+1,26"
+    ]
+  ],
+  "T09": [
+    [
+      "Lớp rác",
+      "P (bài báo)",
+      "P (nhóm)",
+      "R (bài báo)",
+      "R (nhóm)",
+      "F1 (bài báo)",
+      "F1 (nhóm)"
+    ],
+    [
+      "biological",
+      "98",
+      "100,00",
+      "100",
+      "98,57",
+      "99",
+      "99,28"
+    ],
+    [
+      "glass",
+      "98",
+      "99,42",
+      "97",
+      "98,85",
+      "97",
+      "99,14"
+    ],
+    [
+      "metal",
+      "95",
+      "95,88",
+      "97",
+      "100,00",
+      "96",
+      "97,89"
+    ],
+    [
+      "paper",
+      "97",
+      "96,32",
+      "98",
+      "97,76",
+      "97",
+      "97,04"
+    ],
+    [
+      "plastic",
+      "96",
+      "98,14",
+      "94",
+      "99,37",
+      "95",
+      "98,75"
+    ],
+    [
+      "Trung bình 5 lớp",
+      "96,80",
+      "97,95",
+      "97,20",
+      "98,91",
+      "96,80",
+      "98,42"
+    ]
+  ],
+  "T10": [
+    [
+      "Phương pháp",
+      "detector_​original",
+      "detector_​nms",
+      "cascade_​original",
+      "cascade_​nms"
+    ],
+    [
+      "NMS IoU",
+      "None",
+      "0,70",
+      "None",
+      "0,70"
+    ],
+    [
+      "PR Thr",
+      "0,30",
+      "0,30",
+      "0,25",
+      "0,25"
+    ],
+    [
+      "mAP@50",
+      "0,7332",
+      "0,7801",
+      "0,4134",
+      "0,4486"
+    ],
+    [
+      "mAP@50:95",
+      "0,4344",
+      "0,4471",
+      "0,2374",
+      "0,2466"
+    ],
+    [
+      "AR@100",
+      "0,6495",
+      "0,5897",
+      "0,4850",
+      "0,4093"
+    ],
+    [
+      "Precision@50",
+      "0,6698",
+      "0,8020",
+      "0,4737",
+      "0,6273"
+    ],
+    [
+      "Recall@50",
+      "0,6051",
+      "0,6019",
+      "0,5016",
+      "0,4984"
+    ],
+    [
+      "F1@50",
+      "0,6358",
+      "0,6877",
+      "0,4872",
+      "0,5555"
+    ],
+    [
+      "TP",
+      "1.140",
+      "1.134",
+      "945",
+      "939"
+    ],
+    [
+      "FP",
+      "562",
+      "280",
+      "1.050",
+      "558"
+    ],
+    [
+      "FN",
+      "744",
+      "750",
+      "939",
+      "945"
+    ]
+  ],
+  "T11": [
+    [
+      "Phương pháp",
+      "detector_​original",
+      "detector_​nms",
+      "cascade_​original",
+      "cascade_​nms"
+    ],
+    [
+      "Proposals giữ lại",
+      "87.100 (100,00/ảnh)",
+      "32.993 (37,88/ảnh)",
+      "87.100 (100,00/ảnh)",
+      "32.993 (37,88/ảnh)"
+    ],
+    [
+      "Dự đoán xuất (In-scope)",
+      "87.100 (100,00/ảnh)",
+      "32.993 (37,88/ảnh)",
+      "76.892 (88,28/ảnh)",
+      "28.334 (32,53/ảnh)"
+    ],
+    [
+      "Dự đoán OOS bị loại",
+      "0",
+      "0",
+      "10.208 (11,72%)",
+      "4.659 (14,12%)"
+    ],
+    [
+      "Latency TB (ms/ảnh)",
+      "134,41",
+      "129,24",
+      "2.261,56",
+      "949,76"
+    ],
+    [
+      "Latency p50 (ms)",
+      "111,15",
+      "106,30",
+      "1.939,13",
+      "770,50"
+    ],
+    [
+      "Latency p95 (ms)",
+      "300,07",
+      "296,80",
+      "3.945,29",
+      "2.642,97"
+    ],
+    [
+      "Tốc độ (FPS)",
+      "7,44",
+      "7,74",
+      "0,44",
+      "1,05"
+    ]
+  ],
+  "T12": [
+    [
+      "Lớp rác thải",
+      "Số GT box",
+      "detector_original AP50 / AP50:95",
+      "detector_nms AP50 / AP50:95",
+      "cascade_original AP50 / AP50:95",
+      "cascade_nms AP50 / AP50:95",
+      "Delta AP50 do NMS",
+      "Delta AP50 do Cascade"
+    ],
+    [
+      "glass",
+      "156",
+      "0,8901 / 0,5434",
+      "0,9146 / 0,5499",
+      "0,2181 / 0,1235",
+      "0,2235 / 0,1237",
+      "+0,0246 (+2,76% rel)",
+      "-0,6912 (-75,57% rel)"
+    ],
+    [
+      "metal",
+      "134",
+      "0,6843 / 0,3756",
+      "0,7385 / 0,3917",
+      "0,5179 / 0,2818",
+      "0,5544 / 0,2902",
+      "+0,0542 (+7,92% rel)",
+      "-0,1841 (-24,93% rel)"
+    ],
+    [
+      "organic",
+      "911",
+      "0,5965 / 0,3429",
+      "0,6581 / 0,3580",
+      "0,5757 / 0,3329",
+      "0,6408 / 0,3495",
+      "+0,0615 (+10,31% rel)",
+      "-0,0173 (-2,63% rel)"
+    ],
+    [
+      "paper",
+      "192",
+      "0,8079 / 0,5150",
+      "0,8666 / 0,5341",
+      "0,4748 / 0,2903",
+      "0,5264 / 0,3085",
+      "+0,0588 (+7,27% rel)",
+      "-0,3402 (-39,26% rel)"
+    ],
+    [
+      "plastic",
+      "491",
+      "0,6874 / 0,3949",
+      "0,7227 / 0,4017",
+      "0,2807 / 0,1583",
+      "0,2981 / 0,1613",
+      "+0,0352 (+5,13% rel)",
+      "-0,4246 (-58,76% rel)"
+    ],
+    [
+      "Trung bình (mAP)",
+      "1.884",
+      "0,7332 / 0,4344",
+      "0,7801 / 0,4471",
+      "0,4134 / 0,2374",
+      "0,4486 / 0,2466",
+      "+0,0469 (+6,39% rel)",
+      "-0,3315 (-42,49% rel)"
+    ]
+  ],
+  "T13": [
+    [
+      "Phương pháp",
+      "detector_​original",
+      "detector_​nms",
+      "cascade_​original",
+      "cascade_​nms"
+    ],
+    [
+      "Ngưỡng PR",
+      "0,30",
+      "0,30",
+      "0,25",
+      "0,25"
+    ],
+    [
+      "Val mAP@50",
+      "0,7145",
+      "0,7617",
+      "0,4083",
+      "0,4399"
+    ],
+    [
+      "Test mAP@50",
+      "0,7332",
+      "0,7801",
+      "0,4134",
+      "0,4486"
+    ],
+    [
+      "Chênh lệch",
+      "+0,0188",
+      "+0,0184",
+      "+0,0052",
+      "+0,0087"
+    ],
+    [
+      "Val mAP50:95",
+      "0,4335",
+      "0,4445",
+      "0,2409",
+      "0,2477"
+    ],
+    [
+      "Test mAP50:95",
+      "0,4344",
+      "0,4471",
+      "0,2374",
+      "0,2466"
+    ],
+    [
+      "Chênh lệch",
+      "+0,0009",
+      "+0,0026",
+      "-0,0035",
+      "-0,0011"
+    ],
+    [
+      "Val F1@50",
+      "0,6269",
+      "0,6757",
+      "0,4911",
+      "0,5530"
+    ],
+    [
+      "Test F1@50",
+      "0,6358",
+      "0,6877",
+      "0,4872",
+      "0,5555"
+    ],
+    [
+      "Chênh lệch",
+      "+0,0089",
+      "+0,0120",
+      "-0,0038",
+      "+0,0025"
+    ],
+    [
+      "Val AR@100",
+      "0,6448",
+      "0,5849",
+      "0,4859",
+      "0,4169"
+    ],
+    [
+      "Test AR@100",
+      "0,6495",
+      "0,5897",
+      "0,4850",
+      "0,4093"
+    ]
+  ],
+  "T14": [
+    [
+      "#",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    [
+      "Cấu hình chẩn đoán",
+      "detector_nms (Baseline)",
+      "Chỉ Score Fusion",
+      "Thay nhãn nội bộ (Giữ det_class nếu OOS)",
+      "Thay nhãn nội bộ + Score Fusion",
+      "Thay nhãn + Loại OOS, giữ det_score",
+      "cascade_nms (Full Cascade)"
+    ],
+    [
+      "Công thức nhãn & điểm",
+      "det_class + det_score",
+      "det_class + det_score * cls_score",
+      "cls_class (fallback det) + det_score",
+      "cls_class (fallback det) + det_score * cls_score",
+      "cls_class (loại nếu OOS) + det_score",
+      "cls_class (loại nếu OOS) + det_score * cls_score"
+    ],
+    [
+      "Dự đoán xuất",
+      "64.819",
+      "64.819",
+      "64.819",
+      "64.819",
+      "55.590",
+      "55.590"
+    ],
+    [
+      "OOS loại",
+      "0",
+      "0",
+      "0",
+      "0",
+      "9.229",
+      "9.229"
+    ],
+    [
+      "mAP@50",
+      "0,7617",
+      "0,7468",
+      "0,5241",
+      "0,5296",
+      "0,4281",
+      "0,4399"
+    ],
+    [
+      "mAP@50:95",
+      "0,4445",
+      "0,4329",
+      "0,2973",
+      "0,3017",
+      "0,2396",
+      "0,2477"
+    ],
+    [
+      "AR@100",
+      "0,5849",
+      "0,5849",
+      "0,4944",
+      "0,4944",
+      "0,4169",
+      "0,4169"
+    ],
+    [
+      "Best F1@50",
+      "0,6757",
+      "0,6640",
+      "0,5954",
+      "0,5912",
+      "0,5516",
+      "0,5530"
+    ],
+    [
+      "glass AP50",
+      "0,9113",
+      "0,9048",
+      "0,2705",
+      "0,2400",
+      "0,2679",
+      "0,2385"
+    ],
+    [
+      "metal AP50",
+      "0,6580",
+      "0,6480",
+      "0,4519",
+      "0,5162",
+      "0,4337",
+      "0,5024"
+    ],
+    [
+      "organic AP50",
+      "0,6413",
+      "0,6345",
+      "0,6321",
+      "0,6291",
+      "0,6176",
+      "0,6172"
+    ],
+    [
+      "paper AP50",
+      "0,8532",
+      "0,8317",
+      "0,8202",
+      "0,8202",
+      "0,4910",
+      "0,4995"
+    ],
+    [
+      "plastic AP50",
+      "0,7447",
+      "0,7149",
+      "0,4456",
+      "0,4424",
+      "0,3304",
+      "0,3417"
+    ]
+  ],
+  "T15": [
+    [
+      "GT Class",
+      "glass",
+      "metal",
+      "organic",
+      "paper",
+      "plastic",
+      "Tổng cộng"
+    ],
+    [
+      "glass",
+      "121",
+      "6",
+      "6",
+      "0",
+      "58",
+      "191"
+    ],
+    [
+      "metal",
+      "15",
+      "293",
+      "11",
+      "3",
+      "97",
+      "419"
+    ],
+    [
+      "biological",
+      "2",
+      "0",
+      "1.618",
+      "4",
+      "3",
+      "1.627"
+    ],
+    [
+      "paper",
+      "5",
+      "0",
+      "5",
+      "256",
+      "14",
+      "280"
+    ],
+    [
+      "plastic",
+      "168",
+      "12",
+      "5",
+      "6",
+      "519",
+      "710"
+    ],
+    [
+      "cardboard (OOS)",
+      "0",
+      "6",
+      "30",
+      "136",
+      "39",
+      "211"
+    ],
+    [
+      "trash (OOS)",
+      "0",
+      "2",
+      "27",
+      "48",
+      "91",
+      "168"
+    ],
+    [
+      "battery (OOS)",
+      "0",
+      "0",
+      "0",
+      "2",
+      "33",
+      "35"
+    ],
+    [
+      "clothes (OOS)",
+      "0",
+      "1",
+      "13",
+      "2",
+      "0",
+      "16"
+    ],
+    [
+      "shoes (OOS)",
+      "0",
+      "0",
+      "4",
+      "0",
+      "2",
+      "6"
+    ],
+    [
+      "Tổng GT định vị",
+      "311",
+      "320",
+      "1.719",
+      "457",
+      "856",
+      "3.663"
+    ],
+    [
+      "DINOv2 Đúng (%)",
+      "38,91%",
+      "91,56%",
+      "94,12%",
+      "56,02%",
+      "60,63%",
+      "76,63% (2.807)"
+    ],
+    [
+      "DINOv2 Sai nội bộ (%)",
+      "61,09%",
+      "5,62%",
+      "1,57%",
+      "2,84%",
+      "20,09%",
+      "11,47% (420)"
+    ],
+    [
+      "DINOv2 Mất do OOS (%)",
+      "0,00%",
+      "2,81%",
+      "4,30%",
+      "41,14%",
+      "19,28%",
+      "11,90% (436)"
+    ],
+    [
+      "Detector Đúng (%)",
+      "99,04% (308/311)",
+      "94,38% (302/320)",
+      "99,88% (1.717/1.719)",
+      "98,25% (449/457)",
+      "98,36% (842/856)",
+      "98,77% (3.618)"
+    ]
+  ]
+}

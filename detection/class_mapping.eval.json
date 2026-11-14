@@ -1,0 +1,20 @@
+{
+  "name": "explicit_project_aliases_v1",
+  "outside_scope_action": "drop_and_count",
+  "mapping": {
+    "battery": null,
+    "biological": "organic",
+    "cardboard": null,
+    "clothes": null,
+    "glass": "glass",
+    "metal": "metal",
+    "paper": "paper",
+    "plastic": "plastic",
+    "shoes": null,
+    "trash": null
+  },
+  "evidence": {
+    "biological": "Explicit organic -> biological alias in detection/label_map.json. This records the existing project configuration; verify it against the dataset annotation protocol before scientific use."
+  },
+  "scope_note": "cardboard remains outside scope: no evidence currently establishes a cardboard -> paper annotation rule. This policy does not prove that all test GT taxonomy decisions match the classifier taxonomy."
+}

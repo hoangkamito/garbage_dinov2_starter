@@ -32,3 +32,22 @@ runs/
 # OS
 .DS_Store
 Thumbs.db
+# Local datasets and generated experiment artifacts
+WasteDetect_Dataset/
+.pytest_cache/
+.env
+.env.*
+*.sqlite3
+*.zip
+/detection/checkpoints_wastedetect/
+/evaluation_runs/*
+!/evaluation_runs/*.py
+!/evaluation_runs/dg38_additional_experiments/
+/evaluation_runs/dg38_additional_experiments/*
+!/evaluation_runs/dg38_additional_experiments/*.py
+!/evaluation_runs/dg38_additional_experiments/*.ipynb
+!/evaluation_runs/dg38_additional_experiments/*.md
+!/evaluation_runs/dg38_additional_experiments/experiment_registry.json
+!/evaluation_runs/paper_results/
+/evaluation_runs/paper_results/*
+!/evaluation_runs/paper_results/*.py
